@@ -1,0 +1,110 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+              "count": 1
+            }
+          ],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.admob.AdMobPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"MOForceAppClose\"><param name=\"android-package\" value=\"com.example.MOForceAppClose\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"ExitApp\"><param name=\"android-package\" value=\"cordova.custom.plugins.exitapp.ExitApp\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-extension": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    },
+    "cordova-plugin-admobpro": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    },
+    "cordova.custom.plugins.exitapp": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    },
+    "mo-force-app-close": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-admobpro.AdMob",
+      "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
+      "pluginId": "cordova-plugin-admobpro",
+      "clobbers": [
+        "window.AdMob"
+      ]
+    },
+    {
+      "id": "cordova.custom.plugins.exitapp.exitApp",
+      "file": "plugins/cordova.custom.plugins.exitapp/www/ExitApp.js",
+      "pluginId": "cordova.custom.plugins.exitapp",
+      "merges": [
+        "navigator.app"
+      ]
+    },
+    {
+      "id": "mo-force-app-close.plugin",
+      "file": "plugins/mo-force-app-close/www/plugin.js",
+      "pluginId": "mo-force-app-close",
+      "clobbers": [
+        "MOForceAppClose"
+      ],
+      "runs": true
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-extension": "1.5.2",
+    "cordova-plugin-admobpro": "2.29.27",
+    "cordova-plugin-whitelist": "1.3.2",
+    "cordova.custom.plugins.exitapp": "1.0.0",
+    "mo-force-app-close": "1.0.0"
+  }
+}

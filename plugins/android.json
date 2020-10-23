@@ -1,0 +1,27 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-admobpro": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    },
+    "cordova-plugin-extension": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    },
+    "cordova.custom.plugins.exitapp": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    },
+    "mo-force-app-close": {
+      "PACKAGE_NAME": "com.kardelenapp.sillyflight"
+    }
+  },
+  "dependent_plugins": {}
+}
