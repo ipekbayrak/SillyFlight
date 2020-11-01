@@ -26,8 +26,16 @@ var app = {
 		
     }
 };
-var x =   window.innerHeight;
-var y =   window.innerWidth;
+var x ;
+var y;
+
+		if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
+			x =   window.innerWidth;
+			y =   window.innerHeight;
+		} else {
+			y =   window.innerWidth;
+			x =   window.innerHeight;
+		}
 
 var r = y/x;
 var a = 400;
